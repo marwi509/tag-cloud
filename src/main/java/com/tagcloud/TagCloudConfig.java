@@ -1,5 +1,6 @@
 package com.tagcloud;
 
+import com.tagcloud.messages.TwitterConnectorImpl;
 import com.tagcloud.tagcloud.TagCloudService;
 import com.tagcloud.messages.TwitterConnector;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +13,7 @@ public class TagCloudConfig {
 
     @Bean
     public TwitterConnector twitterConnector() {
-        return new TwitterConnector();
+        return new TwitterConnectorImpl();
     }
 
     @Bean
