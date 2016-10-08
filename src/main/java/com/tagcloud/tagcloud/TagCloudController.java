@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -17,9 +18,14 @@ public class TagCloudController {
         this.tagCloudService = tagCloudService;
     }
 
-    @RequestMapping(value = "/tag-cloud-hash-tag")
+    @RequestMapping(value = "/tag-cloud-twitter")
     public List<WeightedWord> createTagCloudFromHashTag(@RequestParam(name = "source") HashTag source) {
         return tagCloudService.createTagCloudFromTwitter(source);
+    }
+
+    @RequestMapping(value = "/tag-cloud-rss")
+    public List<WeightedWord> createTagCloudFromHashTag(@RequestParam(name = "source") URI uri) {
+        return tagCloudService.createTagCloudFromRss(uri);
     }
 
 }
