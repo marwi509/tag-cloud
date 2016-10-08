@@ -14,6 +14,6 @@ public class Message {
     }
 
     public List<String> getWords() {
-        return Arrays.stream(text.split(" ")).collect(toList());
+        return Arrays.stream(text.toLowerCase().split(" ")).collect(toList());
     }
 }

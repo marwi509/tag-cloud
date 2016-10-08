@@ -1,5 +1,7 @@
-package com.tagcloud.messages;
+package com.tagcloud.messages.twitter;
 
+import com.tagcloud.messages.Message;
+import com.tagcloud.tagcloud.HashTag;
 import twitter4j.*;
 
 import java.util.List;
@@ -9,9 +11,9 @@ import static java.util.stream.Collectors.toList;
 public class TwitterConnectorImpl implements TwitterConnector {
 
     @Override
-    public List<Message> getMessages(String hashTag) {
+    public List<Message> getMessages(HashTag hashTag) {
         Twitter twitter = TwitterFactory.getSingleton();
-        Query query = new Query(hashTag);
+        Query query = new Query(hashTag.asString());
         query.setCount(100);
 
         QueryResult result = search(twitter, query);

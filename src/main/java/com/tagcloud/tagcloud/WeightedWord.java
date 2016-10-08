@@ -26,7 +26,6 @@ public class WeightedWord {
         WeightedWord that = (WeightedWord) o;
 
         return Double.compare(that.weight, weight) == 0 && word.equals(that.word);
-
     }
 
     @Override
