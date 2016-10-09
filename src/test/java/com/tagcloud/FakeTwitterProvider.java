@@ -4,7 +4,7 @@ package com.tagcloud;
 import com.google.common.collect.Lists;
 import com.tagcloud.messages.Message;
 import com.tagcloud.messages.twitter.TwitterProvider;
-import com.tagcloud.tagcloud.HashTag;
+import com.tagcloud.messages.twitter.HashTag;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.tagcloud.tagcloud;
+package com.tagcloud.messages.twitter;
 
 import java.util.regex.Pattern;
 
@@ -15,7 +15,7 @@ public class HashTag {
         if(pattern.matcher(value).matches()) {
             return new HashTag(value);
         } else {
-            throw new BadRequestException();
+            throw new InvalidHashTagException();
         }
     }
 

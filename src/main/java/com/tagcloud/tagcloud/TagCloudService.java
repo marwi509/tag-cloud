@@ -1,6 +1,7 @@
 package com.tagcloud.tagcloud;
 
 import com.tagcloud.messages.rss.RssProvider;
+import com.tagcloud.messages.twitter.HashTag;
 import com.tagcloud.messages.twitter.TwitterProvider;
 
 import java.net.URI;
