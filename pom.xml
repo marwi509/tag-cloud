@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>tag-cloud</name>
-	<description>Tag cloud API and presentation</description>
+	<description>Tag cloud API</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
