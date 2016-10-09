@@ -5,6 +5,6 @@ import com.tagcloud.tagcloud.HashTag;
 
 import java.util.List;
 
-public interface TwitterConnector {
+public interface TwitterProvider {
     List<Message> getMessages(HashTag hashTag);
 }

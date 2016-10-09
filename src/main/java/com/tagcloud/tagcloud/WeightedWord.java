@@ -1,11 +1,17 @@
 package com.tagcloud.tagcloud;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class WeightedWord {
 
     private final String word;
     private final double weight;
 
-    public WeightedWord(String word, double weight) {
+    @JsonCreator
+    public WeightedWord(
+            @JsonProperty("word") String word,
+            @JsonProperty("weight") double weight) {
         this.word = word;
         this.weight = weight;
     }

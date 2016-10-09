@@ -2,7 +2,6 @@ package com.tagcloud.tagcloud;
 
 import com.google.common.collect.Lists;
 import com.tagcloud.messages.Message;
-import com.tagcloud.messages.twitter.TwitterConnector;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,9 +12,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 
 public class WeightedWordFactoryTest {

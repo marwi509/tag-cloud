@@ -10,7 +10,7 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class RssConnectorImpl implements RssConnector {
+public class RssProviderImpl implements RssProvider {
 
     private static final RestTemplate restTemplate = new RestTemplate();
 

@@ -1,9 +1,9 @@
 package com.tagcloud;
 
-import com.tagcloud.messages.rss.RssConnector;
-import com.tagcloud.messages.rss.RssConnectorImpl;
-import com.tagcloud.messages.twitter.TwitterConnector;
-import com.tagcloud.messages.twitter.TwitterConnectorImpl;
+import com.tagcloud.messages.rss.RssProvider;
+import com.tagcloud.messages.rss.RssProviderImpl;
+import com.tagcloud.messages.twitter.TwitterProvider;
+import com.tagcloud.messages.twitter.TwitterProviderImpl;
 import com.tagcloud.tagcloud.TagCloudService;
 import com.tagcloud.tagcloud.WeightedWordFactory;
 import org.springframework.context.annotation.Bean;
@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Configuration;
 public class TagCloudConfig {
 
     @Bean
-    public TwitterConnector twitterConnector() {
-        return new TwitterConnectorImpl();
+    public TwitterProvider twitterConnector() {
+        return new TwitterProviderImpl();
     }
 
     @Bean
-    public RssConnector rssConnector() {
-        return new RssConnectorImpl();
+    public RssProvider rssConnector() {
+        return new RssProviderImpl();
     }
 
     @Bean
@@ -31,12 +31,12 @@ public class TagCloudConfig {
 
     @Bean
     public TagCloudService tagCloudService(
-            TwitterConnector twitterConnector,
-            RssConnector rssConnector,
+            TwitterProvider twitterProvider,
+            RssProvider rssProvider,
             WeightedWordFactory weightedWordFactory) {
         return new TagCloudService(
-                rssConnector,
-                twitterConnector,
+                rssProvider,
+                twitterProvider,
                 weightedWordFactory);
     }
 

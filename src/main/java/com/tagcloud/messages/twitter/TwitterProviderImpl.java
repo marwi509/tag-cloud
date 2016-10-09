@@ -8,7 +8,7 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class TwitterConnectorImpl implements TwitterConnector {
+public class TwitterProviderImpl implements TwitterProvider {
 
     @Override
     public List<Message> getMessages(HashTag hashTag) {
